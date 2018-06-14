@@ -1,0 +1,10 @@
+﻿print('panel2 hello')
+
+
+function start()
+	print('panel2 start')
+end
+
+function ondestroy()
+	print('panel2 destroy')
+end

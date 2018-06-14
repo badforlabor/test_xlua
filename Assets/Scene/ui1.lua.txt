@@ -1,0 +1,22 @@
+﻿print('ui1 hello')
+
+local str1 = 'local str1'
+
+function start()
+	print('ui1 start')
+	local panel = (self.transform:GetChild(0))
+	-- print(p.gameObject.name);
+	local txt1 = panel.transform:GetChild(1):GetComponent("Text");
+	txt1.text = "123"
+
+	local btn1 = panel.transform:GetChild(0):GetComponent("Button");
+	btn1.onClick:AddListener(
+		function()
+			txt1.text = str1;--"after click btn1";
+		end
+	)
+end
+
+function ondestroy()
+	print('ui1 destroy')
+end
